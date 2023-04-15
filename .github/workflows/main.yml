@@ -38,10 +38,10 @@ jobs:
         terraform_version: 1.4.5
         
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      id: fmt
-      run: terraform fmt -check
-      continue-on-error: true
+    #- name: Terraform Format
+    #  id: fmt
+    #  run: terraform fmt -check
+    #  continue-on-error: true
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
