@@ -47,13 +47,13 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
-      continue-on-error: true
+      #continue-on-error: true
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -no-color
       if: github.event_name == 'pull_request'
-      continue-on-error: true
+      #continue-on-error: true
     - name: Terraform Plan status
       if: steps.plan.outcome == 'failure'
       run: exit 1
